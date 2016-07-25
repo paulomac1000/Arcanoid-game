@@ -1,0 +1,13 @@
+﻿  menu.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  main.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  Ustawienia.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  Top 10.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  Gra.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  Audio.cpp
+c:\tgui-0.6\include\tgui\global.hpp(36): fatal error C1083: Cannot open include file: 'TGUI/Config.hpp': No such file or directory
+  Generating Code...
