@@ -1,4 +1,4 @@
-# Arcanoid
+# Arcanoid game
 Gra napisana w drugim semestrze, oddana w maju 2015. Pierwszy tak duży program w moim wykonaniu. Kod nie jest zbyt czysty, ale działa niezawodnie. (SFML + TGUI + C++)
 
 Grę pisałem 3 tygodnie. Zawiera 5 map (mapy są wczytywane z plików), TOP10 dla każdej z map, ustawienia gdzie można zmienić ustawienia ekranu, włączyć/wyłączyć dźwięk itp. 
@@ -21,3 +21,5 @@ Do skompilowania wymagane jest:
 -biblioteka TGUI w wersji 0.6 w folderze TGUI-0.6 na dysku C
 -Visual Studio 2013
 Nie sprawdzałem działania na innych wersjach. Być może jednak się uruchomi.
+
+@2015
