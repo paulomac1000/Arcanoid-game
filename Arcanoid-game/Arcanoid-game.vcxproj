@@ -61,17 +61,23 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>..\SFML-2.3\bin\openal32.dll ..\Debug\openal32.dll
-..\SFML-2.3\bin\sfml-audio-d-2.dll ..\Debug\sfml-audio-d-2.dll
-..\SFML-2.3\bin\sfml-graphics-d-2.dll ..\Debug\sfml-graphics-d-2.dll
-..\SFML-2.3\bin\sfml-network-d-2.dll ..\Debug\sfml-network-d-2.dll
-..\SFML-2.3\bin\sfml-system-d-2.dll ..\Debug\sfml-system-d-2.dll
-..\SFML-2.3\bin\sfml-window-d-2.dll ..\Debug\sfml-window-d-2.dll
-..\TGUI-0.6\bin\tgui-d.dll ..\Debug\tgui-d.dll
+      <Command>copy ..\SFML-2.3\bin\openal32.dll ..\Debug\openal32.dll
+copy ..\SFML-2.3\bin\sfml-audio-d-2.dll ..\Debug\sfml-audio-d-2.dll
+copy ..\SFML-2.3\bin\sfml-graphics-d-2.dll ..\Debug\sfml-graphics-d-2.dll
+copy ..\SFML-2.3\bin\sfml-network-d-2.dll ..\Debug\sfml-network-d-2.dll
+copy ..\SFML-2.3\bin\sfml-system-d-2.dll ..\Debug\sfml-system-d-2.dll
+copy ..\SFML-2.3\bin\sfml-window-d-2.dll ..\Debug\sfml-window-d-2.dll
+copy ..\TGUI-0.6\bin\tgui-d.dll ..\Debug\tgui-d.dll
+copy icon.ico ..\Debug\icon.ico
+mkdir ..\Debug\maps
 copy maps\*.* ..\Debug\maps\*.*
+mkdir ..\Debug\music
 copy music\*.* ..\Debug\music\*.*
+mkdir ..\Debug\resources
 copy resources\*.* ..\Debug\resources\*.*
+mkdir ..\Debug\sounds
 copy sounds\*.* ..\Debug\sounds\*.*
+mkdir ..\Debug\top
 copy top\*.* ..\Debug\top\*.*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -93,18 +99,23 @@ copy top\*.* ..\Debug\top\*.*</Command>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>..\SFML-2.3\bin\openal32.dll ..\Debug\openal32.dll
-..\SFML-2.3\bin\sfml-audio-2.dll ..\Debug\sfml-audio-2.dll
-..\SFML-2.3\bin\sfml-graphics-2.dll ..\Debug\sfml-graphics-2.dll
-..\SFML-2.3\bin\sfml-network-2.dll ..\Debug\sfml-network-2.dll
-..\SFML-2.3\bin\sfml-system-2.dll ..\Debug\sfml-system-2.dll
-..\SFML-2.3\bin\sfml-window-2.dll ..\Debug\sfml-window-2.dll
-..\TGUI-0.6\bin\tgui.dll ..\Debug\tgui.dll
-copy maps\*.* ..\Debug\maps\*.*
-copy music\*.* ..\Debug\music\*.*
-copy resources\*.* ..\Debug\resources\*.*
-copy sounds\*.* ..\Debug\sounds\*.*
-copy top\*.* ..\Debug\top\*.*</Command>
+      <Command>copy ..\SFML-2.3\bin\openal32.dll ..\Release\openal32.dll
+copy ..\SFML-2.3\bin\sfml-audio-2.dll ..\Release\sfml-audio-2.dll
+copy ..\SFML-2.3\bin\sfml-graphics-2.dll ..\Release\sfml-graphics-2.dll
+copy ..\SFML-2.3\bin\sfml-network-2.dll ..\Release\sfml-network-2.dll
+copy ..\SFML-2.3\bin\sfml-system-2.dll ..\Release\sfml-system-2.dll
+copy ..\SFML-2.3\bin\sfml-window-2.dll ..\Release\sfml-window-2.dll
+copy ..\TGUI-0.6\bin\tgui.dll ..\Release\tgui.dll
+copy icon.ico ..\Release\icon.ico
+mkdir ..\Release\maps
+copy maps\*.* ..\Release\maps\*.*
+mkdir ..\Release\music
+copy music\*.* ..\Release\music\*.*
+mkdir ..\Release\resources
+copy resources\*.* ..\Release\resources\*.*
+mkdir ..\Release\sounds
+copy sounds\*.* ..\Release\sounds\*.*
+mkdir ..\Release\top</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
