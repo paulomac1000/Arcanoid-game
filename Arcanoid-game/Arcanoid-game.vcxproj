@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8A46DAB8-C181-4B8F-9520-47DA10B8F140}</ProjectGuid>
+    <RootNamespace>SFML</RootNamespace>
+    <ProjectName>Arcanoid-game</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\TGUI-0.6\include;C:\SFML-2.3\include;$(IncludePath)</IncludePath>
+    <LibraryWPath>C:\TGUI-0.6\lib;C:\SFML-2.3\lib;$(LibraryWPath)</LibraryWPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\TGUI-0.6\include;C:\SFML-2.3\include;$(IncludePath)</IncludePath>
+    <LibraryWPath>C:\TGUI-0.6\lib;C:\SFML-2.3\lib;$(LibraryWPath)</LibraryWPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\TGUI-0.6\include;..\SFML-2.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\TGUI-0.6\lib;..\SFML-2.3\lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>..\SFML-2.3\bin\openal32.dll ..\Debug\openal32.dll
+..\SFML-2.3\bin\sfml-audio-d-2.dll ..\Debug\sfml-audio-d-2.dll
+..\SFML-2.3\bin\sfml-graphics-d-2.dll ..\Debug\sfml-graphics-d-2.dll
+..\SFML-2.3\bin\sfml-network-d-2.dll ..\Debug\sfml-network-d-2.dll
+..\SFML-2.3\bin\sfml-system-d-2.dll ..\Debug\sfml-system-d-2.dll
+..\SFML-2.3\bin\sfml-window-d-2.dll ..\Debug\sfml-window-d-2.dll
+..\TGUI-0.6\bin\tgui-d.dll ..\Debug\tgui-d.dll
+copy maps\*.* ..\Debug\maps\*.*
+copy music\*.* ..\Debug\music\*.*
+copy resources\*.* ..\Debug\resources\*.*
+copy sounds\*.* ..\Debug\sounds\*.*
+copy top\*.* ..\Debug\top\*.*</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\TGUI-0.6\include;..\SFML-2.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>sfml-window.lib;sfml-system.lib;sfml-network.lib;sfml-main.lib;sfml-graphics.lib;sfml-audio.lib;..\TGUI-0.6\lib;..\SFML-2.3\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;tgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>..\SFML-2.3\bin\openal32.dll ..\Debug\openal32.dll
+..\SFML-2.3\bin\sfml-audio-2.dll ..\Debug\sfml-audio-2.dll
+..\SFML-2.3\bin\sfml-graphics-2.dll ..\Debug\sfml-graphics-2.dll
+..\SFML-2.3\bin\sfml-network-2.dll ..\Debug\sfml-network-2.dll
+..\SFML-2.3\bin\sfml-system-2.dll ..\Debug\sfml-system-2.dll
+..\SFML-2.3\bin\sfml-window-2.dll ..\Debug\sfml-window-2.dll
+..\TGUI-0.6\bin\tgui.dll ..\Debug\tgui.dll
+copy maps\*.* ..\Debug\maps\*.*
+copy music\*.* ..\Debug\music\*.*
+copy resources\*.* ..\Debug\resources\*.*
+copy sounds\*.* ..\Debug\sounds\*.*
+copy top\*.* ..\Debug\top\*.*</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Gra.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="Top 10.cpp" />
+    <ClCompile Include="Ustawienia.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="gra.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="Top 10.h" />
+    <ClInclude Include="Ustawienia.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="maps\map_1.map" />
+    <None Include="maps\map_2.map" />
+    <None Include="maps\map_3.map" />
+    <None Include="maps\map_4.map" />
+    <None Include="maps\map_5.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
