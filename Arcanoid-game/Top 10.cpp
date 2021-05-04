@@ -176,9 +176,9 @@ void top10()
 	oknoTOP10.setFramerateLimit(120);
 	tgui::Gui gui(oknoTOP10);
 	sf::Image im;
-	if (!im.loadFromFile("icon.png"))
+	if (!im.loadFromFile("resources/icon.png"))
 	{
-		MessageBox(NULL, "B³¹d podczas ³adowania ikony icon.png. Upewnij siê, ¿e ikona znajduje siê w katalogu z gr¹.", "ERROR", NULL);
+		MessageBox(NULL, "B³¹d podczas ³adowania obrazu icon.png. Upewnij siê, ¿e obraz znajduje siê w katalogu resources.", "ERROR", NULL);
 		oknoTOP10.close();
 	}
 

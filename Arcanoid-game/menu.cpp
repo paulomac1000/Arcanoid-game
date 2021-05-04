@@ -215,12 +215,12 @@ void wybór_podprogramu(int wybór_opcji_w_menu, sf::RenderWindow &oknoAplikacj)
 
 void menu()
 {
-	sf::RenderWindow oknoMENU(sf::VideoMode(800, 600, 32), "Arkanoid", 1); //fullscreen to 8, 1 to brak paska  u góry i nierozszerzalnoœæ
+	sf::RenderWindow oknoMENU(sf::VideoMode(800, 600, 32), "Arcanoid", 1); //fullscreen to 8, 1 to brak paska  u góry i nierozszerzalnoœæ
 
 	sf::Image im;
-	if (!im.loadFromFile("icon.png"))
+	if (!im.loadFromFile("resources/icon.png"))
 	{
-		MessageBox(NULL, "B³¹d podczas ³adowania ikony icon.png. Upewnij siê, ¿e ikona znajduje siê w katalogu z gr¹.", "ERROR", NULL);
+		MessageBox(NULL, "B³¹d podczas ³adowania obrazu icon.png. Upewnij siê, ¿e obraz znajduje siê w katalogu resources.", "ERROR", NULL);
 		oknoMENU.close();
 	}
 	oknoMENU.setIcon(32, 32, im.getPixelsPtr());

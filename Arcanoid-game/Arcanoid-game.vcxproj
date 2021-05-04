@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -69,6 +69,7 @@ copy ..\SFML-2.3\bin\sfml-system-d-2.dll ..\Debug\sfml-system-d-2.dll
 copy ..\SFML-2.3\bin\sfml-window-d-2.dll ..\Debug\sfml-window-d-2.dll
 copy ..\TGUI-0.6\bin\tgui-d.dll ..\Debug\tgui-d.dll
 copy icon.ico ..\Debug\icon.ico
+copy config.cfg ..\Debug\config.cfg
 mkdir ..\Debug\maps
 copy maps\*.* ..\Debug\maps\*.*
 mkdir ..\Debug\music
@@ -107,6 +108,7 @@ copy ..\SFML-2.3\bin\sfml-system-2.dll ..\Release\sfml-system-2.dll
 copy ..\SFML-2.3\bin\sfml-window-2.dll ..\Release\sfml-window-2.dll
 copy ..\TGUI-0.6\bin\tgui.dll ..\Release\tgui.dll
 copy icon.ico ..\Release\icon.ico
+copy config.cfg ..\Release\config.cfg
 mkdir ..\Release\maps
 copy maps\*.* ..\Release\maps\*.*
 mkdir ..\Release\music
@@ -115,7 +117,8 @@ mkdir ..\Release\resources
 copy resources\*.* ..\Release\resources\*.*
 mkdir ..\Release\sounds
 copy sounds\*.* ..\Release\sounds\*.*
-mkdir ..\Release\top</Command>
+mkdir ..\Release\top
+copy top\*.* ..\Release\top\*.*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

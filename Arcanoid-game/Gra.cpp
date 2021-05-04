@@ -185,7 +185,7 @@ int Plansza::wybierz_level(sf::RenderWindow &oknoGRA)
 
 	/* https://tgui.eu/tutorials/v06/intro3/ */
 
-	sf::RenderWindow oknoWYBÓR(sf::VideoMode(480, 260, 32), "Arkanoid", 1); //fullscreen to 8, 1 to brak paska  u góry i nierozszerzalnoœæ
+	sf::RenderWindow oknoWYBÓR(sf::VideoMode(480, 260, 32), "Arcanoid", 1); //fullscreen to 8, 1 to brak paska  u góry i nierozszerzalnoœæ
 	oknoGRA.setActive(false);
 	oknoGRA.setVisible(false);
 	oknoWYBÓR.setFramerateLimit(120);
@@ -863,7 +863,7 @@ void ustaw_parametry(sf::RenderWindow &OKNO)
 void gra()
 {
 	odczyt_z_configu(config);
-	sf::RenderWindow OKNOgra(sf::VideoMode(800, 600, 32), "Arkanoid", sprawdŸ_tryb_ekranu());
+	sf::RenderWindow OKNOgra(sf::VideoMode(800, 600, 32), "Arcanoid", sprawdŸ_tryb_ekranu());
 	ustaw_parametry(OKNOgra);
 
 	Engine engine(OKNOgra);
